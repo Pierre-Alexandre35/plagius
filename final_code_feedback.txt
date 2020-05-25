@@ -1,0 +1,17 @@
+Team 6 - 95
+
+README could have been edited with startup information. Nice to see one startup file for the whole application
+Your endpoints could be names better. Your /postFiles is actually just a POST method on /file. The HTTP method name is not included in the endpoint.
+Used advanced Java features. Liked the creation of a custom interface to handle file operations and extending Closable interface.
+Some classes and private functions lack documentation. Use of lambda functions also reduce readability and hence documentation is vital to provide an easier understanding of the method definitions
+Commented code are present in some files and should have been refactored
+Factories are used throughout the project. Great work!!
+Citation should be provided when using an already existing algorithm
+Lots of git issues and looks like you guys used the git issues well to organize your project. Looks like you worked on the project consistently. 
+.gitgnore has all the rules. Great job.
+Project is structured really well and is very modular
+Tests are also organized well. Would have been a better idea to follow the same structure which the src follows so that it is easier to identify tests for a particular class.
+Some test names start with an uppercase character
+Multiple algorithms are present to identify different kinds of plagiarism instead of relying on just one algorithm. This allows for a more robust software. The algorithms chosen complement each other well.
+JavaScript has JSDoc which is similar to JavaDoc. They begin with “/*” and would have been great if you filtered out these as well for comparing comments. Same way, python documentation also use “”” which could have been used for comparison
+Pretty good tests suite

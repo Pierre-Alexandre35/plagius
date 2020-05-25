@@ -1,0 +1,188 @@
+- Good job with the Javadocs, there are a lot of comments and it makes it easy to tell what things are doing. There is a private method here and there which doesn't have Javadoc. I might put a Javadoc on them just-in-case.
+
+- In "getLCSIndexes" there is a very long string of method calls involving lambda functions also. I think this is probably personal preference but my preference is that, while it's nice all on one line, it makes it harder to read. I'd split it up a bit, but ultimately I think it comes down to personal preference.
+
+- Your tests are named testOne, testTwo... I would give these tests more meaningful names. These names could be what the method is testing. For example: testOne could be testLCSCorrectWithExpression or testTwo could be testLCSCorrectWithSourceCode. Etc.
+
+- It seems like there are a lot of methods or classes that currently aren't being used. My assumption is that they will be but what will use them hasn't been implemented yet. Just a heads up to make sure everything you code gets used, otherwise remove it.
+
+- You have a package named "types" and a package named "results" which is a little unclear. Maybe change them? Types seems like it holds different objects that can be uploaded to the program or analyzed. Maybe even call it something like..."upload_types" or "submission_components". You know, something a bit more clear.
+
+- You guys seem like you've made a lot of good progress. I mostly saw good things. Good luck with the project and I can't wait to see what you come up with!
+
+______________________________________________________________________
+
+General
+--------------
+- Good Structure - separates all the different parts of the project well.
+- consistent lack of commenting makes it hard to follow along with how the program actually works - especially
+ hard because a lot of the interfaces are not commented so have no clue what is going on.
+- good use of the resource folder to hold python files that will be consistently used
+- why is the antler proj stuff outside of the src?
+
+
+Tests
+------
+- no assert in the main test
+
+SRC
+----
+-spelled lcsCompaison in line 71 of lcs getter rather than comparison - may cause confusion :P
+-The G is LCSgetter should probably be uppercase
+- Nice use of generics in the Assignment interface by keeping things as lists rather than specifics
+- unsure what the purpose of the asdf driver is - maybe used for temporary testing but hard to tell without label
+______________________________________________________________________
+- so just right off the bat, it seems as though the file structure is a little unwieldy. There’s
+a project source folder which has another source folder inside it but also a folder named
+“res” and I’m not really sure what that refers to. I don’t know if it’s possible to do now,
+but some reorganization of this structure would probably be a good thing to do.
+Class = LCSAlgo.java
+Package = project_src/src/main/java/analysis/LCS/
+- The java docs for this class are half completed - they have the params and return value for most of the methods but as they don’t have the description of what the method
+actually does, it makes it hard to tell what it’s actually used for.
+- The variable names seem to be reasonably clear and logical.
+-The algorithm they’re using seems to be a variation of LCS involving substrings of tokens - upon seeing their LCS code I do wonder if this particular class could be simplified any further as it seems a little method heavy. However, with that being said, it doesn’t look as though there are any spots where they could refactor using extract method, so perhaps the few extra methods is a good thing.
+- The methods all seem to do one thing and one thing only.
+- It seems as though this team has set up all the files and structures that they will need to complete the project but haven’t quite implemented these classes everywhere just yet (i.e. there are quite a few “TODO” comments dotted throughout. 
+______________________________________________________________________
+Team 6
+analysis/LCS/
+* These files look pretty good - small methods, good variable names! :)
+* Just finish adding documentation to each method
+
+analysis/lingustic/
+* Obviously, implement the factory methods for javascript and python
+
+analysis/lingustic/language_components/
+* It is unclear to me what these classes are supposed to do?
+
+analysis/linguistic
+* Some things to still implement in the classes that are not in directories here
+
+analysis/textual
+* Both textual analyzers still need to be implemented
+
+analysis
+* Clearer documentation would be helpful even in the classes that are not implemented yet - just to help a reader understand their intended purpose in the larger structure :)
+
+backend_model/types
+* Interface methods look good, documentation would be helpful
+* Will these be implemented in this directory?
+
+controller/LogicController.java
+* Random semi-colon on line 9 :)
+
+results/AstResultGenerator.java
+* indicate exceptions thrown in the method signature
+
+test/java/LCSTest.java
+* It would be nice if the test methods had names to indicate what you are testing in each one - if they are all testing the same aspect of LCS they are redundant - if not, their name should indicate what aspect of LCS they are testing.  Your tests are not redundant so you should be able to indicate the differences between what you are testing :)
+* Are there any invalid states that you should test?  Edge cases?
+
+test/java/MainTest.java
+* Not sure what is happening here…
+
+test/java/TokenStreamTest.java
+* Looks like more tests are needed here for valid and for edge cases
+
+Overall
+* Clear documentation for each class, attribute, method would be nice :)  Even if its for something that isn't implemented yet - might help keep track of current status in project!
+______________________________________________________________________
+1)
+Filepath: antlr_proj\src\main\java\com\antlr_proj\antlr_proj\AntlrProjApplication.java
+File: AntlrProjApplication.java
+Problem: Commenting
+File has no comments. Even though the class is primarily a driver (with a main),
+there should be comments explaining what input (if any) there is needed in String args[]
+to main and how program gets started.
+
+2)
+Filepath: antlr_proj\src\test\java\com\antlr_proj\antlr_proj\AntlrProjApplication.java
+File: AntlrProjApplicationTests.java
+Problem: Testing
+There are no tests for inputing the 2 projects and changing them to a format that
+the ANTLR processing part takes. This test should be done because is the files are
+not processed properly, then the ANTLR processing (and therefore, algorithms) will
+not work, which means the program will fail.
+
+3)
+Problem: Project Structure
+Project structure is very confusing, with many nested folders and packages.
+There are at least 50 classes in the project, which makes it very confusing for
+a developer (or someone who looks through the project code) to understand how all the 
+pieces fit together. It is also hard to follow the flow of control between classes
+and how classes call each other.
+
+4)
+Filepath: Project_src\src\main\java\analysis\lingustic\language_components\data
+Files: all files in filepath
+Problem: Class Hierarchy
+All of the classes in the data package extend Value (except Value itself).
+Most of these classes have a method eval, and it looks like the rest will also
+have an eval method eventually. The eval method can be put in the abstract class
+Value, and overwritten if needed in its subclasses.
+
+5)
+Filepath: Project_src\src\main\java\analysis\lingustic\python
+Files: asdf.java
+Problem: Confusing Class Name
+There is a file called asdf.java.
+This classname is not confusing, as it does not explain what the class does.
+The class has a main that runs the Python ANTLR files, and prints out the size
+of the tokenStream. This file might be a temporary file that will be deleted;
+however, if it's kept, the filename should be changed.
+______________________________________________________________________
+1) 
+FilePath - Antlr_project/AntlrProjApplication.java
+Problem - Documentation. This file is a driver file and it has no comments, some comments are expected explaining what the driver file does and it's inputs. 
+
+2) 
+FilePath - Antlr_project/AntlrProjApplicationTests.java
+Problem - Documentation. There's no test done for this file and comments are also missing for the overall file. Test is expected to make sure that the program runs properly. 
+
+3) 
+FilePath - OverallProject
+Problem - Badly structured project. The project is very poorly structured with multiple nested packages that has more than 30 classes, which made it difficult to follow their project structure. 
+
+4) 
+FilePath - duplicate folder (Antlr_project and Project_Src -> lignustic)
+Problem - The project has 2 ANTLR project folder, which is not needed. All the antlr files are in the project source folder (lingustic) and the driver is in a separate folder outside the project source. I think the driver can be placed in the same project source folder. 
+
+5) 
+Filepath - Project_Src/lingustic/python/asdf.java
+Problem - Confusing class name. Comments is missing from this class and the class in named as ASDF so I'm not sure what this class means. 
+______________________________________________________________________
+1.
+Type of Problem: Lack of Documentation.
+Location: Throughout the project interfaces (package backend_model.types: Assignment.java, Submission.java,
+ModelData.java. package controller: LogicController.java, package results: Report.java, ResultGenerator.java)
+Exact problem: Lack of comments for public methods declared in the interfaces.
+2.
+Type of Problem: Structure of Project
+Location: The location of the antlr_proj.
+Exact problem: antlr apckage should be inside the project source folder.
+3.
+Type of Problem: Lack of documentaion for tests.
+Location: directory test, package java: class LCSTest, class TokenStreamTest.
+Exact Problem: Lack of comments for the test classes
+______________________________________________________________________
+1. LCSTest.java file test methods doesn’t have descriptive names neither they have any comments so it is
+hard to figure out what is being tested in these methods.
+2. In LCSTest.java file instead of instantiating LCS every time in each test method they could have
+instantiated the LCS in @BeforeClass method(setup method) and used that variable across all the
+methods. This change will make code more readable.
+3. MainTest.java file doesn’t contain any method which actually tests anything and it also contains lot of
+code which is just commented instead of being deleted from there. This is making code less readable and
+hard to navigate through.
+4. TokenStreamTest.java file contains a test which is failing the assertion which should not happen in any
+test suite, this file also contains lot of code which is just commented instead of being removed and it also
+have two unused variable named reader and reader2.
+5. Here LCSgetter.java is responsible for generating tokens from the file and also responsible for displaying
+the common tokens between files. I think it would have been better if responsibility of generating tokens
+from file would be handled by other class/object and LCSgetter.java just uses that class/object for
+generating tokens. This way if we want to extend File comparison algorithms they all can share the token
+generating class/object. In Current design this is not possible.
+6. LCSgetter.java file same statement is executed twice for no reason. I am talking about line number 72 and
+73 where lcsCompaison.common(listOne,listTwo); is called twice. This is resulting in wastage of time.
+7. getLCSIndexes.java first here the class name starts with a lower case letter which is against Java
+convention and this file/class is not tested at all and statement coverage is zero in this file.

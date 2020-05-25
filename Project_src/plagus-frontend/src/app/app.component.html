@@ -1,0 +1,239 @@
+<div>
+  <div class="jumbotron jumbotron-fluid" style="background: blueviolet;">
+    <div class="container">
+      <h1 class="display-4 text-white">Plagus</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid form-group">
+    <div class="row">
+      <div class="col m-3 text-center">
+        <label for="file-1" class="h6">Choose ZIP File 1:</label>
+        <input class="btn" type="file" id="file-1" (change)="handleFileInput1($event.target.files)">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col m-3 text-center">
+        <label for="file-2" class="h6">Choose ZIP File 2:</label>
+        <input class="btn" type="file" id="file-2" (change)="handleFileInput2($event.target.files)">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <label class="h6">Choose File Type:</label>
+        <div class="btn-group btn-group-toggle m-3" data-toggle="buttons">
+          <label class="active m-3">
+            <input type="radio" name="options" id="option1" autocomplete="off" (click)="fileTypeChanged('PYTHON')">
+            Python
+          </label>
+          <label class="active m-3">
+            <input type="radio" name="options" id="option2" autocomplete="off" (click)="fileTypeChanged('JAVASCRIPT')">
+            JavaScript
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col m-3 text-center">
+      <button class="btn btn-success" (click)="submitFiles()">Submit Files</button>
+    </div>
+  </div>
+
+  <br />
+
+  <div *ngIf="responseReceived">
+
+    <div class="row bg-success">
+      <div class="col text-center text-white">
+        <h4>Report</h4>
+      </div>
+    </div>
+
+    <br />
+
+    <nav class="nav nav-pills nav-fill">
+      <a class="nav-item nav-link" [ngClass]="{ 'active':activeTab==='lcs'}" (click)="this.setActiveTab('lcs')"
+        href="javascript:void(0)">
+        LCS Analysis</a>
+      <a class="nav-item nav-link" [ngClass]="{ 'active':activeTab==='comment'}" href="javascript:void(0)"
+        (click)="this.setActiveTab('comment')">
+        Comment Analysis</a>
+      <a class="nav-item nav-link" [ngClass]="{ 'active':activeTab==='ast'}" (click)="this.setActiveTab('ast')"
+        href="javascript:void(0)">
+        AST Analysis</a>
+      <a class="nav-item nav-link" [ngClass]="{ 'active':activeTab==='function'}" href="javascript:void(0)"
+        (click)="this.setActiveTab('function')">Function Analysis</a>
+    </nav>
+
+
+    <div class="container-fluid">
+
+      <ng-container *ngIf="activeTab==='lcs'">
+        <div class="row m-2">
+          <div class="col m-3 text-center">
+            <h4>LCS Analysis</h4>
+          </div>
+        </div>
+
+        <div class="row m-2 border">
+          <div class="col-6 text-center">
+            Set 1
+          </div>
+          <div class="col-6 text-center">
+            Set 2
+          </div>
+        </div>
+
+        <ng-container *ngFor="let lcsDiff of LCSReport">
+          <div class="row border m-2 border">
+            <div class="col-6">
+
+              <p style="white-space: pre-wrap; font-family: 'Courier New', Courier, monospace;
+                  color: red">
+                {{lcsDiff.text}}</p>
+
+              <p>Lines: {{lcsDiff.startRow1}} - {{lcsDiff.endRow1}}</p>
+
+            </div>
+
+            <div class="col-6">
+              <p style="white-space: pre-wrap; font-family: 'Courier New', Courier, monospace;
+                    color: red">
+                {{lcsDiff.text}}</p>
+
+              <p>Lines: {{lcsDiff.startRow2}} - {{lcsDiff.endRow2}}</p>
+
+            </div>
+          </div>
+        </ng-container>
+
+      </ng-container>
+
+      <ng-container *ngIf="activeTab==='ast'">
+        <div class="row">
+          <div class="col m-3 text-center">
+            <h4>AST Analysis</h4>
+          </div>
+        </div>
+
+        <div class="row border">
+          <div class="col-4 text-center">
+            <h5>Rule</h5>
+            <button (click)="sort('rule')">sort asc</button>
+            <button (click)="sort('rule', 'desc')">sort desc</button>
+          </div>
+          <div class="col-4 text-center">
+            <h5>Set 1 Value</h5>
+            <button (click)="sort('firstCount')">sort asc</button>
+            <button (click)="sort('firstCount', 'desc')">sort desc</button>
+          </div>
+          <div class="col-4 text-center">
+            <h5>Set 2 Value</h5>
+            <button (click)="sort('secondCount')">sort asc</button>
+            <button (click)="sort('secondCount', 'desc')">sort asc</button>
+          </div>
+        </div>
+
+        <div *ngFor="let count of classCounterReport">
+
+          <div class="row">
+            <div class="col-4 text-center">
+              <h6>{{count.rule}}</h6>
+            </div>
+            <div class="col-4 text-center">
+              <p>{{count.firstCount}}</p>
+            </div>
+            <div class="col-4 text-center">
+              <p>{{count.secondCount}}</p>
+            </div>
+          </div>
+
+        </div>
+
+      </ng-container>
+
+
+      <ng-container *ngIf="activeTab==='comment'">
+        <div class="row">
+          <div class="col m-3 text-center">
+            <h4>Comment Analysis</h4>
+          </div>
+        </div>
+
+        <div class="row border">
+          <div class="col-4 text-center">
+            <h5>Set 1</h5>
+          </div>
+          <div class="col-4 text-center">
+            <h5>Set 2</h5>
+          </div>
+          <div class="col-4 text-center">
+            <h5>Levenshtein Dist.</h5>
+          </div>
+        </div>
+
+        <div *ngFor="let commentRep of commentReport">
+
+          <div class="row border">
+            <div class="col-4">
+              <p style="white-space: pre-wrap; font-family: 'Courier New', Courier, monospace;
+            color: red">{{commentRep.left}}</p>
+            </div>
+            <div class="col-4">
+              <p style="white-space: pre-wrap; font-family: 'Courier New', Courier, monospace;
+            color: red">{{commentRep.right}}</p>
+            </div>
+            <div class="col-4 text-center">
+              <p>{{commentRep.distance}}</p>
+            </div>
+          </div>
+        </div>
+
+      </ng-container>
+
+      <ng-container *ngIf="activeTab==='function'">
+        <div class="row">
+          <div class="col m-3 text-center">
+            <h4>Function Analysis</h4>
+          </div>
+        </div>
+
+        <div class="row border">
+          <div class="col-4 text-center">
+            <h5>Set 1</h5>
+          </div>
+          <div class="col-4 text-center">
+            <h5>Set 2</h5>
+          </div>
+          <div class="col-4 text-center">
+            <h5>Levenshtein Dist.</h5>
+          </div>
+        </div>
+
+        <div *ngFor="let funcRep of functionReport">
+
+          <div class="row border">
+            <div class="col-4">
+              <p style="white-space: pre-wrap; font-family: 'Courier New', Courier, monospace;
+              color: red">{{funcRep.left}}</p>
+            </div>
+            <div class="col-4">
+              <p style="white-space: pre-wrap; font-family: 'Courier New', Courier, monospace;
+              color: red">{{funcRep.right}}</p>
+            </div>
+            <div class="col-4 text-center">
+              <p>{{funcRep.distance}}</p>
+            </div>
+          </div>
+
+        </div>
+
+      </ng-container>
+
+
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>

@@ -1,0 +1,16 @@
+Group 6 -- 95/100
+
+Overall, good job, the tool looks really solid overall with a nice and functional front end and a well-engineered back end. Below are some specific comments/feedback:
+
+Pros:
+- very impressive demo
+- meta-thinking about how plagiarism is usually done, good job with this
+- good job choosing the algorithms, looks like a lot of thought put into what algorithms chosen and their respective tradeoffs
+- good discussion about the use of canonical names for variables and functions
+- demonstrated solid understanding of design choices
+- nice work on the analysis of code comments
+- good job with some really thoughtful engineering of language representations
+- overall looks like a really solid project
+
+Cons:
+- awkward team dynamics, and the presentation was not rehearsed

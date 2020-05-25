@@ -1,0 +1,344 @@
+	-----Submissions-----
+
+
+{
+  "lang": "PYTHON",
+  "levFuncReports": {
+    "functionMap": {
+      "USER_ONE": [
+        {
+          "path": "/res/Sample-code/pyDemo1.py",
+          "lineNum": 5,
+          "data": "deff5():     pass\n\n",
+          "renamedString": "defvar0():\n    pass\n\n"
+        },
+        {
+          "path": "/res/Sample-code/pyDemo1.py",
+          "lineNum": 8,
+          "data": "defbinSearch(xs,lo,hi,target):     iflo>hi:         returnFalse  mid=(lo+hi)//2 ifxs[mid]==target:         returnTrue  elifxs[mid]<target:         returnbinSearch(xs,mid+1,hi,target)  else:         returnbinSearch(xs,lo,mid-1,target)\n\n\n",
+          "renamedString": "defvar0(var1,var2,var3,var4):\n    ifvar2>var3:\n        returnFalse\n\nvar5=(var2+var3)//2\nifvar1[var5]==var4:\n        returnTrue\n\nelifvar1[var5]<var4:\n        returnvar0(var1,var5+1,var3,var4)\n\nelse:\n        returnvar0(var1,var2,var5-1,var4)\n\n\n"
+        },
+        {
+          "path": "/res/Sample-code/pyDemo1.py",
+          "lineNum": 20,
+          "data": "defdoAlgo(base,add):     result=(base**3)+add returnresult\n\n",
+          "renamedString": "defvar0(var1,var2):\n    var3=(var1**3)+var2\nreturnvar3\n\n"
+        }
+      ],
+      "USER_TWO": [
+        {
+          "path": "/res/Sample-code/pyDemo2.py",
+          "lineNum": 4,
+          "data": "defcubeNAdd(x,k):     w=(x**3)+k returnw\n\n",
+          "renamedString": "defvar0(var1,var2):\n    var3=(var1**3)+var2\nreturnvar3\n\n"
+        },
+        {
+          "path": "/res/Sample-code/pyDemo2.py",
+          "lineNum": 9,
+          "data": "defnil():     return\n\n",
+          "renamedString": "defvar0():\n    return\n\n"
+        },
+        {
+          "path": "/res/Sample-code/pyDemo2.py",
+          "lineNum": 13,
+          "data": "defbinSearch(arr,minimum,maximum,target):     ifmaximum>minimum:         returnFalse  mid=(minimum+maximum)//2 ifarr[mid]==target:         returnTrue  elifarr[mid]<target:         returnbinSearch(arr,mid+1,maximum,target)  else:         returnbinSearch(arr,minimum,mid-1,target)\n\n\n",
+          "renamedString": "defvar0(var1,var2,var3,var4):\n    ifvar3>var2:\n        returnFalse\n\nvar5=(var2+var3)//2\nifvar1[var5]==var4:\n        returnTrue\n\nelifvar1[var5]<var4:\n        returnvar0(var1,var5+1,var3,var4)\n\nelse:\n        returnvar0(var1,var2,var5-1,var4)\n\n\n"
+        }
+      ]
+    },
+    "reportList": [
+      {
+        "distance": 2,
+        "left": "defvar0(var1,var2,var3,var4):\n    ifvar2>var3:\n        returnFalse\n\nvar5=(var2+var3)//2\nifvar1[var5]==var4:\n        returnTrue\n\nelifvar1[var5]<var4:\n        returnvar0(var1,var5+1,var3,var4)\n\nelse:\n        returnvar0(var1,var2,var5-1,var4)\n\n\n",
+        "right": "defvar0(var1,var2,var3,var4):\n    ifvar3>var2:\n        returnFalse\n\nvar5=(var2+var3)//2\nifvar1[var5]==var4:\n        returnTrue\n\nelifvar1[var5]<var4:\n        returnvar0(var1,var5+1,var3,var4)\n\nelse:\n        returnvar0(var1,var2,var5-1,var4)\n\n\n"
+      },
+      {
+        "distance": 0,
+        "left": "defvar0(var1,var2):\n    var3=(var1**3)+var2\nreturnvar3\n\n",
+        "right": "defvar0(var1,var2):\n    var3=(var1**3)+var2\nreturnvar3\n\n"
+      }
+    ]
+  },
+  "commentReport": {
+    "lang": "PYTHON",
+    "reports": [
+      {
+        "distance": 3,
+        "left": "#binary search",
+        "right": "#bin search"
+      },
+      {
+        "distance": 0,
+        "left": "#used for many thngs!",
+        "right": "#used for many thngs!"
+      },
+      {
+        "distance": 4,
+        "left": "#changing the loops#hope no one notices",
+        "right": "#changing loops#hope no one notices"
+      }
+    ]
+  },
+  "lcsReport": {
+    "reports": {
+      ":a=cubeNAdd(i,i**2)": [
+        {
+          "studentNo": "USER_ONE",
+          "FILE": "/res/Sample-code/pyDemo1.py",
+          "lcsString": ":a=cubeNAdd(i,i**2)",
+          "lcsLength": 19,
+          "startingLine": 22,
+          "endingLine": 23,
+          "startingIndex": 12,
+          "endingIndex": 26,
+          "lcsPercentage": 0
+        },
+        {
+          "studentNo": "USER_TWO",
+          "FILE": "/res/Sample-code/pyDemo2.py",
+          "lcsString": ":a=cubeNAdd(i,i**2)",
+          "lcsLength": 19,
+          "startingLine": 21,
+          "endingLine": 22,
+          "startingIndex": 21,
+          "endingIndex": 26,
+          "lcsPercentage": 0
+        }
+      ]
+    }
+  },
+  "minis": [
+    {
+      "student1": "USER_ONE",
+      "student2": "USER_TWO",
+      "text": ":a=cubeNAdd(i,i**2)",
+      "file1": "/res/Sample-code/pyDemo1.py",
+      "file2": "/res/Sample-code/pyDemo2.py",
+      "startRow1": 22,
+      "startRow2": 21,
+      "startCol1": 12,
+      "startCol2": 21,
+      "endRow1": 23,
+      "endRow2": 22,
+      "endCol1": 26,
+      "endCol2": 26
+    }
+  ],
+  "classCountList": [
+    {
+      "rule": "Or test",
+      "firstCount": 40,
+      "secondCount": 37
+    },
+    {
+      "rule": "Flow stmt",
+      "firstCount": 5,
+      "secondCount": 6
+    },
+    {
+      "rule": "Arglist",
+      "firstCount": 4,
+      "secondCount": 6
+    },
+    {
+      "rule": "Argument",
+      "firstCount": 11,
+      "secondCount": 16
+    },
+    {
+      "rule": "Expr stmt",
+      "firstCount": 8,
+      "secondCount": 4
+    },
+    {
+      "rule": "Power",
+      "firstCount": 54,
+      "secondCount": 50
+    },
+    {
+      "rule": "Term",
+      "firstCount": 50,
+      "secondCount": 47
+    },
+    {
+      "rule": "Atom expr",
+      "firstCount": 54,
+      "secondCount": 50
+    },
+    {
+      "rule": "While stmt",
+      "firstCount": 2,
+      "secondCount": 0
+    },
+    {
+      "rule": "Subscriptlist",
+      "firstCount": 2,
+      "secondCount": 2
+    },
+    {
+      "rule": "Not test",
+      "firstCount": 40,
+      "secondCount": 37
+    },
+    {
+      "rule": "Comp op",
+      "firstCount": 5,
+      "secondCount": 3
+    },
+    {
+      "rule": "Comparison",
+      "firstCount": 40,
+      "secondCount": 37
+    },
+    {
+      "rule": "Testlist",
+      "firstCount": 6,
+      "secondCount": 7
+    },
+    {
+      "rule": "Shift expr",
+      "firstCount": 45,
+      "secondCount": 42
+    },
+    {
+      "rule": "Testlist comp",
+      "firstCount": 2,
+      "secondCount": 2
+    },
+    {
+      "rule": "Augassign",
+      "firstCount": 1,
+      "secondCount": 0
+    },
+    {
+      "rule": "And expr",
+      "firstCount": 45,
+      "secondCount": 42
+    },
+    {
+      "rule": "Small stmt",
+      "firstCount": 14,
+      "secondCount": 10
+    },
+    {
+      "rule": "And test",
+      "firstCount": 40,
+      "secondCount": 37
+    },
+    {
+      "rule": "Typedargslist",
+      "firstCount": 2,
+      "secondCount": 2
+    },
+    {
+      "rule": "Xor expr",
+      "firstCount": 45,
+      "secondCount": 42
+    },
+    {
+      "rule": "Testlist star expr",
+      "firstCount": 14,
+      "secondCount": 7
+    },
+    {
+      "rule": "Parameters",
+      "firstCount": 3,
+      "secondCount": 3
+    },
+    {
+      "rule": "Return stmt",
+      "firstCount": 5,
+      "secondCount": 6
+    },
+    {
+      "rule": "Tfpdef",
+      "firstCount": 6,
+      "secondCount": 6
+    },
+    {
+      "rule": "Compound stmt",
+      "firstCount": 7,
+      "secondCount": 7
+    },
+    {
+      "rule": "Exprlist",
+      "firstCount": 0,
+      "secondCount": 2
+    },
+    {
+      "rule": "Test",
+      "firstCount": 40,
+      "secondCount": 37
+    },
+    {
+      "rule": "Funcdef",
+      "firstCount": 3,
+      "secondCount": 3
+    },
+    {
+      "rule": "Atom",
+      "firstCount": 54,
+      "secondCount": 50
+    },
+    {
+      "rule": "Subscript",
+      "firstCount": 2,
+      "secondCount": 2
+    },
+    {
+      "rule": "Expr",
+      "firstCount": 45,
+      "secondCount": 42
+    },
+    {
+      "rule": "Arith expr",
+      "firstCount": 45,
+      "secondCount": 42
+    },
+    {
+      "rule": "Stmt",
+      "firstCount": 21,
+      "secondCount": 17
+    },
+    {
+      "rule": "File input",
+      "firstCount": 1,
+      "secondCount": 1
+    },
+    {
+      "rule": "Trailer",
+      "firstCount": 6,
+      "secondCount": 8
+    },
+    {
+      "rule": "Suite",
+      "firstCount": 9,
+      "secondCount": 9
+    },
+    {
+      "rule": "Pass stmt",
+      "firstCount": 1,
+      "secondCount": 0
+    },
+    {
+      "rule": "Simple stmt",
+      "firstCount": 14,
+      "secondCount": 10
+    },
+    {
+      "rule": "If stmt",
+      "firstCount": 2,
+      "secondCount": 2
+    },
+    {
+      "rule": "For stmt",
+      "firstCount": 0,
+      "secondCount": 2
+    },
+    {
+      "rule": "Factor",
+      "firstCount": 54,
+      "secondCount": 51
+    }
+  ]
+}

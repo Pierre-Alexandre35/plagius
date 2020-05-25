@@ -1,0 +1,6 @@
+Score: 93
+- nice description of division of labour, looks good
+- nice UI mockups and good job showing the workflow of the application
+- UML class diagram also looks good
+- not enough documentation in the Java interfaces -- methods are not commented so it's unclear what functionality to expect from them
+- nice use of default methods, and code generally looks good

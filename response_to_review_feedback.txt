@@ -1,0 +1,5 @@
+Team 6: 94/100
+
+Most of the comments were about formatting project structure which was done really well.
+There were also some about adding more comments and removing unused classes which was also addressed well.
+All other applicable comments were addressed well. Good job!

@@ -1,0 +1,13 @@
+Team 6: 95/100
+
+Team 6 did an excellent job on the final report.  The report is well-written and well-organized, with sections covering the system architecture, back-end design, algorithms, development practices, and a brief report on testing and how the feedback received in the context of HW5 was addressed. The algorithms used (LCS, comment analysis using Levenshtein Distance, structural analysis) are well-explained. While the report does not discuss an analysis that performs a structural comparison of two ASTs, the team did implement a very useful transformation where variable names are replaced with canonical names, which will help significantly with detecting plagiarism in cases where variables have been renamed. Some useful examples have been incorporated to illustrate the tool’s capabilities.  A few specific comments:
+
+  - this is really a very good result given the different skills levels in the team. Some of the team members clearly had an opportunity to learn a lot of new skills.
+
+  - it would have been nice to comment directly on how well your plagiarism does on the examples provided by the TAs
+
+  - for references to algorithms, please try to avoid using web sites because they are generally not peer-reviewed and the content is not stable. Better to refer to published papers.
+
+  - minor comment for future reports: when you include a table (as in sections VI and VII) it is a good idea to write a few sentences to explain what is shown in the figure.
+
+Overall, great job!
