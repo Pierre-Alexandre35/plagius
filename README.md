@@ -1,8 +1,6 @@
 # Plagius - Code Plagiarism Detector 🎒 
 
-<img alt="GitHub code version" src="https://img.shields.io/badge/version-1.0-pink">
-<img alt="license" src="https://img.shields.io/badge/License-Northeastern%20University-orange">
-<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Pierre-Alexandre35/Plagius?color=red">
+<img alt="GitHub code version" src="https://img.shields.io/badge/version-1.0-pink"> <img alt="license" src="https://img.shields.io/badge/License-Northeastern%20University-orange"> <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Pierre-Alexandre35/Plagius?color=red">
 
 ## Description
 Northeastern University <a href="https://pages.github.ccs.neu.edu/CS5500-CourseMaterials/2019-Fall-Section1/index.html">Sofware Engineering</a> class project. Plagius is a code plagiarism application that detects code similitary between two filles (JavaScrip or TypeScript). 
