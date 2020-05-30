@@ -14,16 +14,16 @@ Northeastern University <a href="https://pages.github.ccs.neu.edu/CS5500-CourseM
 - You need to design an tool for detecting similarities between two programs
   - Should go beyond textual “diff” (e.g., consider renaming variables, extracting code into functions, moving code, changing comments, etc.)
   - Should handle multi-file programs (assume files may have been renamed)
-• Interactive user-interface
+- Interactive user-interface
   - Choice of desktop application or web-based system
   - The main “logic” for your application must be written in Java
   - UI may be web-based, using HTML/CSS/JavaScript
-• You may use existing libraries for basic infrastructure
+- You may use existing libraries for basic infrastructure
   - Parsing code, building ASTs
   - But not for the main logic that identifies similarities
-• Follow the development process as presented in the lectures
+- Follow the development process as presented in the lectures
   - Testing, documentation, version control, continuous integration
-• Recommended: study the literature on plagiarism detection
+- Recommended: study the literature on plagiarism detection
 
 
 
