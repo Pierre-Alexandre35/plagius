@@ -10,8 +10,7 @@ Northeastern University <a href="https://pages.github.ccs.neu.edu/CS5500-CourseM
 
 
 ## Requirements
-- Plagiarism detector must work on code written in 2 languages of your
-choice. e.g., Python, JavaScript, HTML, Rust, Racket. Java is not allowed
+• Plagiarism detector must work on code written in 2 languages of your choice. e.g., Python, JavaScript, HTML, Rust, Racket. Java is not allowed
 • You need to design an tool for detecting similarities between two programs
   - Should go beyond textual “diff” (e.g., consider renaming variables, extracting code into functions, moving code, changing comments, etc.)
   - Should handle multi-file programs (assume files may have been renamed)
