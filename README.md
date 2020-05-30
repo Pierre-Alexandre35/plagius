@@ -6,7 +6,7 @@
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Pierre-Alexandre35/Personal_website?color=red">
 <img alt="GitHub code version" src="https://img.shields.io/badge/version-2.0-pink">
 ## Description
-Personal website of Pierr-Alexandre Mousset, Software Developer. This website is aiming to introduce myself and display some of my work. The website has designed, built and deployed by myself. The website is currently static and I am using Formspree as a form backend, API and email service for my contact form. 
+Northeastern University <a href="https://pages.github.ccs.neu.edu/CS5500-CourseMaterials/2019-Fall-Section1/index.html">Sofware Engeneuring</a> class 
 
 ## Roadmap
 - Add the search engine project
