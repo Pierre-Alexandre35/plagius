@@ -1,11 +1,11 @@
 # Plagius - Code Plagiarism Detector 🎒 
 
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://plagius.io/)
-<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Pierre-Alexandre35/Plagius?color=red">
 <img alt="GitHub code version" src="https://img.shields.io/badge/version-1.0-pink">
 <img alt="license" src="https://img.shields.io/badge/License-Northeastern%20University-orange">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Pierre-Alexandre35/Plagius?color=red">
+
 ## Description
-Northeastern University <a href="https://pages.github.ccs.neu.edu/CS5500-CourseMaterials/2019-Fall-Section1/index.html">Sofware Engeneuring</a> class 
+Northeastern University <a href="https://pages.github.ccs.neu.edu/CS5500-CourseMaterials/2019-Fall-Section1/index.html">Sofware Engineering</a> class project. Plagius is a code plagiarism application that detects code similitary between two filles (JavaScrip or TypeScript). 
 
 
 ## Requirements
@@ -24,13 +24,6 @@ Northeastern University <a href="https://pages.github.ccs.neu.edu/CS5500-CourseM
   - Testing, documentation, version control, continuous integration
 - Recommended: study the literature on plagiarism detection
 
-
-
-## Roadmap
-- Add the search engine project
-- Add a blank target for every links
-- Redesign some of the buttons (color and hover effect) 
-- Add a news section with personnal articles
 
 ## Contributions
 - Hassan Khan, Northeastern University student
