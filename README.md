@@ -1,4 +1,21 @@
-# Team-06-F19
-team repo for Team-06-F19
+# Plagius - Code Plagiarism Detector 🎒 
 
-Phase B contents located in directory phaseB.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://pierre-alexandre.io/)
+[![HitCount](http://hits.dwyl.com/Pierre-Alexandre35/Personal_Website.svg)](http://hits.dwyl.com/Pierre-Alexandre35/Personal_Website)
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Pierre-Alexandre35/Personal_website?color=red">
+<img alt="GitHub code version" src="https://img.shields.io/badge/version-2.0-pink">
+## Description
+Personal website of Pierr-Alexandre Mousset, Software Developer. This website is aiming to introduce myself and display some of my work. The website has designed, built and deployed by myself. The website is currently static and I am using Formspree as a form backend, API and email service for my contact form. 
+
+## Roadmap
+- Add the search engine project
+- Add a blank target for every links
+- Redesign some of the buttons (color and hover effect) 
+- Add a news section with personnal articles
+
+## Contributions
+- Hassan Khan, Northeastern University student
+- Samuel Rapahel, Northeastern University student
+- Philip Yichuan, Northeastern University student 
+- Pierre-Alexandre Mousset, Northeastern University student 
